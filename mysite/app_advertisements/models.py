@@ -14,5 +14,11 @@ class Advertisement(models.Model):
     class Meta:
         db_table = "advertisements"
 
+    # def __str__(self):
+    #     return '%s %s' % (self.title, self.price)
+    def __str__(self):
+        return f"Advertisement(id={self.pk}, title={self.title}, price={self.price})"
 
 
+# from app_advertisements.models import Advertisement
+# advertisement = Advertisement.objects.create(title="Test1", description="Test2", price=115.22, is_auction=True)
