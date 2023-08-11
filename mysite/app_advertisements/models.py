@@ -10,3 +10,9 @@ class Advertisement(models.Model):
     is_auction = models.BooleanField("уместен ли торг", help_text="Отметьте, если торг по объявлению уместен.")
     updated_at = models.DateTimeField("дата обновления", auto_now=True)
     created_at = models.DateTimeField("дата публикации", auto_now_add=True)
+
+    class Meta:
+        db_table = "advertisements"
+
+
+
