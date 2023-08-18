@@ -5,7 +5,7 @@ from .models import Advertisement
 # Register your models here.
 
 class AdvertisemetAdmin(admin.ModelAdmin):
-    list_display = ["id", "title", "price", "is_auction", "created_date"]
+    list_display = ["id", "title", "price", "is_auction", "created_date", "updated_date"]
     actions = ["make_auction_as_true", "make_auction_as_false"]
     list_filter = ["is_auction", "created_at"]
 
