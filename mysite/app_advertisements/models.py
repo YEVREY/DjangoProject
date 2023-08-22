@@ -39,6 +39,7 @@ class Advertisement(models.Model):
 
     @admin.display(description="изображение")
     def image_in_admin(self):
+
         return format_html(
             "<img src={} style='width: 50px; height: 50px'>", f"{settings.MEDIA_URL}{self.image}"
         )
