@@ -5,7 +5,7 @@ from .models import Advertisement
 # Register your models here.
 
 class AdvertisemetAdmin(admin.ModelAdmin):
-    list_display = ["id", "title", "price", "is_auction", "created_date", "updated_date", "image"]
+    list_display = ["id", "title", "price", "is_auction", "created_date", "updated_date", "image_in_admin"]
     actions = ["make_auction_as_true", "make_auction_as_false"]
     list_filter = ["is_auction", "created_at"]
 
@@ -21,5 +21,6 @@ class AdvertisemetAdmin(admin.ModelAdmin):
     @admin.action(description="Сделать торг не уместным")
     def make_auction_as_false(self, request, queryset):
         queryset.update(is_auction=False)
+
 
 admin.site.register(Advertisement, AdvertisemetAdmin)
